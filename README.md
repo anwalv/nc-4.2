@@ -1,7 +1,7 @@
 # FTP Server Setup and Authentication
 
 ## Brief Description
-This project automates the setup of an FTP server on a fresh Ubuntu 24.04 installation using `vsftpd`. It also provides an authentication service that
+This project automates the setup of an FTP server on a fresh Ubuntu 24.04 installation using `vsftpd`. It also provides an authentication service that 
 controls access to the FTP server based on IP address and authorization key.
 
 ## Installation
@@ -20,8 +20,16 @@ controls access to the FTP server based on IP address and authorization key.
 3. Add valid IP and key pairs to `credentials.txt` for authorized clients.
 4. The FTP server will be available at port 21. If you want to connect from ip which was passed when the script was run, use the command :
     ```bash
-    ftp 172.22.234.41.
+    ftp 172.22.234.41
     ```
+    Use user login and password(from assignment)
+
     If your address was not passed, then try using the command to attempt authorization:
+    ```bash
     nc 172.22.234.41 7777
-(You need to change **172.22.234.41** to ip of VM where was runned configureServer.sh.
+    ```
+    Enter authorisation key and run:
+   ```bash
+    ftp 172.22.234.41
+    ``` 
+(You need to change **172.22.234.41** to ip of VM where was runned configureServer.sh)
